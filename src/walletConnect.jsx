@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
 
-const useWallet = () => {
+const useETHWallet = () => {
   const [account, setAccount] = useState(null);
   const [provider, setProvider] = useState(null);
   const [balance, setBalance] = useState(null);
@@ -50,5 +50,5 @@ const useWallet = () => {
   };
 };
 
- export default useWallet;
+ export default useETHWallet;
 
