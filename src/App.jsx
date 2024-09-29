@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import useWallet from './walletConnect';
+import useETHWallet from './walletConnect';
 import { ethers } from 'ethers';
 
 const App = () => {
-  const { account, balance, connectWallet } = useWallet();
+  const { account, balance, connectWallet } = useETHWallet();
   const [inputAddress, setInputAddress] = useState('');
   const [inputBalance, setInputBalance] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -37,7 +37,7 @@ const App = () => {
       ) : (
         <div>
           <p>Connected Account: <strong>{account}</strong></p>
-          <p>Your Balance: <strong>{balance} ETH</strong></p>
+          {/* <p>Your Balance: <strong>{balance} ETH</strong></p> */}
         </div>
       )}
       <input

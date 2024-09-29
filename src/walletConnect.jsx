@@ -19,7 +19,7 @@ const useETHWallet = () => {
       const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
       setAccount(accounts[0]);
 
-      // Get network information
+      
       const network = await provider.getNetwork();
       setNetwork(network);
     } else {
